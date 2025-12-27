@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Vinznex - Our Story</title>
+    <meta name="description"
+        content="Learn about Vinznex, the developers behind Myanmar Gospel Songs and Cumtu Dictionary apps.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+        }
+
+        .about-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-hero h1 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .about-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+        }
+
+        .story-section {
+            background: var(--bg-secondary);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-content h2 {
+            margin-bottom: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .story-content p {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+
+        .mission-section {
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .mission-card {
+            background: var(--bg-glass);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(139, 92, 246, 0.3);
+            box-shadow: var(--accent-glow);
+        }
+
+        .mission-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gradient);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+        }
+
+        .mission-icon svg {
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+
+        .mission-card h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.25rem;
+        }
+
+        .mission-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            background: var(--bg-secondary);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-content p {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--bg-glass);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-full);
+            transition: all var(--transition-normal);
+        }
+
+        .contact-item:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .contact-item svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent-primary);
+        }
+
+        .contact-item span {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Vinznex Logo">
+                <span>Vinznex</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#apps">Apps</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="about.html" class="active">Our Story</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#apps">Apps</a>
+        <a href="index.html#about">About</a>
+        <a href="about.html" class="active">Our Story</a>
+    </div>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our <span class="gradient-text">Story</span></h1>
+            <p>From a simple idea to meaningful applications that serve thousands of users across Myanmar and beyond.
+            </p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content reveal">
+                <h2>The Beginning</h2>
+                <p>Vinznex was born from a deep passion for technology and a desire to serve the Myanmar community. We
+                    started with a simple question: How can we use our skills to make a positive impact?</p>
+                <p>Our first app, Myanmar Gospel Songs, came from a personal need to access Myanmar Christian music
+                    easily. What started as a simple project quickly grew into a platform serving thousands of believers
+                    who wanted to connect with their faith through music.</p>
+                <p>The success of Myanmar Gospel Songs inspired us to think bigger. We realized there was a need to
+                    preserve and promote ethnic languages in Myanmar. This led to the creation of Cumtu Chin-Myanmar
+                    Dictionary, a tool designed to help people learn and preserve the beautiful Chin language.</p>
+                <p>Today, Vinznex continues to develop applications that bridge technology and culture, making digital
+                    tools accessible to everyone in the Myanmar community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our Mission</h2>
+                <p>We are guided by core values that drive everything we do.</p>
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card reveal">
+                    <div class="mission-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3>Purpose-Driven</h3>
+                    <p>Every app we create serves a meaningful purpose, designed to enrich lives and strengthen
+                        communities.</p>
+                </div>
+
+                <div class="mission-card reveal">
+                    <div class="mission-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3>Cultural Preservation</h3>
+                    <p>We are committed to preserving Myanmar's rich cultural heritage through digital tools and
+                        language resources.</p>
+                </div>
+
+                <div class="mission-card reveal">
+                    <div class="mission-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We continuously improve our apps with the latest technologies to provide the best user experience
+                        possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content reveal">
+                <h2>Get in Touch</h2>
+                <p>Have questions, feedback, or suggestions? We'd love to hear from you!</p>
+
+                <div class="contact-info">
+                    <a href="mailto:vinznex@yahoo.com" class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span>vinznex@yahoo.com</span>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/dev?id=8062938484459746017" target="_blank"
+                        class="contact-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="color: var(--accent-primary);">
+                            <path
+                                d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                        </svg>
+                        <span>View on Google Play Store</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.png" alt="Vinznex Logo">
+                        <span>Vinznex</span>
+                    </a>
+                    <p>Crafting apps that make a difference for the Myanmar community worldwide.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#apps">Apps</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:vinznex@yahoo.com">vinznex@yahoo.com</a></li>
+                        <li><a href="https://play.google.com/store/apps/dev?id=8062938484459746017"
+                                target="_blank">Google Play Store</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vinznex. All rights reserved.</p>
+
+                <div class="social-links">
+                    <a href="mailto:vinznex@yahoo.com" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://play.google.com/store/apps/dev?id=8062938484459746017" target="_blank"
+                        aria-label="Google Play">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

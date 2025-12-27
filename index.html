@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinznex - Crafting Apps That Make a Difference</title>
+  <meta name="description"
+    content="Vinznex creates innovative Android and web applications. Discover Myanmar Gospel Songs and Cumtu Chin-Myanmar Dictionary.">
+  <meta name="keywords" content="Vinznex, Myanmar Gospel Songs, Cumtu Dictionary, Android Apps, Myanmar Apps">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vinznex - Crafting Apps That Make a Difference">
+  <meta property="og:description" content="Innovative Android and web applications for Myanmar users.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Vinznex Logo">
+        <span>Vinznex</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="about.html">Our Story</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" class="active">Home</a>
+    <a href="#apps">Apps</a>
+    <a href="#about">About</a>
+    <a href="about.html">Our Story</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        Available on Google Play
+      </div>
+
+      <h1>Crafting Apps That<br><span class="gradient-text">Make a Difference</span></h1>
+
+      <p>We build innovative Android and web applications designed to serve and empower the Myanmar community worldwide.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#apps" class="btn btn-primary">
+          Explore Our Apps
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="#about" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps Section -->
+  <section class="apps-section" id="apps">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our Applications</h2>
+        <p>Discover our collection of apps designed with love and purpose for the Myanmar community.</p>
+      </div>
+
+      <div class="apps-grid">
+        <!-- Myanmar Gospel Songs -->
+        <div class="app-card reveal">
+          <div class="app-mockup">
+            <img src="images/gospel_app.png" alt="Myanmar Gospel Songs App">
+          </div>
+          <div class="app-info">
+            <span class="app-category">Music & Audio</span>
+            <h3>Myanmar Gospel Songs</h3>
+            <p class="app-description">Stream over 1,500 Myanmar gospel songs, hymns, praise, and worship music for
+              everyone. Connect with your faith through beautiful music.</p>
+            <ul class="app-features">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                1,500+ Gospel Songs
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Hymns, Praise & Worship
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Offline Favorites
+              </li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.vinznex.gospelsongs" target="_blank"
+              rel="noopener noreferrer" class="btn btn-play">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+              </svg>
+              Get it on Google Play
+            </a>
+          </div>
+        </div>
+
+        <!-- Cumtu Dictionary -->
+        <div class="app-card reveal">
+          <div class="app-mockup">
+            <img src="images/dictionary_app.png" alt="Cumtu Chin-Myanmar Dictionary App">
+          </div>
+          <div class="app-info">
+            <span class="app-category">Education</span>
+            <h3>Cumtu Chin-Myanmar Dictionary</h3>
+            <p class="app-description">Learn and preserve Chin ethnic languages with our comprehensive Chin-Myanmar
+              dictionary. Bridge cultures through language.</p>
+            <ul class="app-features">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Chin-Myanmar Translations
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Ethnic Language Preservation
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Easy to Use Interface
+              </li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.vinznex.cumtudictionary" target="_blank"
+              rel="noopener noreferrer" class="btn btn-play">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+              </svg>
+              Get it on Google Play
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text reveal">
+          <h2>About Vinznex</h2>
+          <p>We are passionate developers dedicated to creating meaningful applications for the Myanmar community. Our
+            mission is to bridge technology and culture, making digital tools accessible to everyone.</p>
+          <p>From preserving ethnic languages to spreading the joy of gospel music, each of our apps is crafted with
+            purpose and love.</p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Published Apps</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">1,500+</div>
+              <div class="stat-label">Gospel Songs</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">∞</div>
+              <div class="stat-label">Passion</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image reveal">
+          <div class="about-visual">
+            <img src="images/Vinznex Icon_transparent.png" alt="Vinznex Logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Vinznex Logo">
+            <span>Vinznex</span>
+          </a>
+          <p>Crafting apps that make a difference for the Myanmar community worldwide.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:vinznex@yahoo.com">vinznex@yahoo.com</a></li>
+            <li><a href="https://play.google.com/store/apps/dev?id=8062938484459746017" target="_blank">Google Play
+                Store</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Vinznex. All rights reserved.</p>
+
+        <div class="social-links">
+          <a href="mailto:vinznex@yahoo.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+          <a href="https://play.google.com/store/apps/dev?id=8062938484459746017" target="_blank"
+            aria-label="Google Play">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
