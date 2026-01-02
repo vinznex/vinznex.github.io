@@ -1,0 +1,162 @@
+/* About Page Specific Styles */
+
+.about-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 150px 0 80px;
+    text-align: center;
+    position: relative;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero h1 {
+    margin-bottom: var(--spacing-md);
+}
+
+.about-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+}
+
+.story-section {
+    background: var(--bg-secondary);
+    padding: var(--spacing-2xl) 0;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-content h2 {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.story-content p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.mission-section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.mission-card {
+    background: var(--bg-glass);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: var(--accent-glow);
+}
+
+.mission-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-gradient);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+}
+
+.mission-icon svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.mission-card h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+}
+
+.mission-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.contact-section {
+    background: var(--bg-secondary);
+    padding: var(--spacing-2xl) 0;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-content p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--bg-glass);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-normal);
+}
+
+.contact-item:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.contact-item svg {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-primary);
+}
+
+.contact-item span {
+    color: var(--text-secondary);
+}
