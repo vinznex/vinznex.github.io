@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "vinznex.github.io",
+  "Id": "60083cda-6ca7-422f-b9e3-b13522ea49a9"
+}
