@@ -1,323 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support Myanmar Gospel Songs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #241318;
-    --ink-soft: #33212a;
-    --gold: #c9a227;
-    --gold-soft: #ddc27a;
-    --cream: #f3e9dc;
-    --jade: #3e5c50;
-    --jade-light: #6b8c7f;
-    --rose: #b8604f;
-    --line: rgba(201, 162, 39, 0.28);
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Myanmar Gospel App</title>
+    <!-- Outfit Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FF0066;
+            --primary-hover: #E6005C;
+            --bg-gradient: linear-gradient(135deg, #0a0715 0%, #110c22 50%, #04020a 100%);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --glass-hover: rgba(255, 255, 255, 0.05);
+            --text-main: #ffffff;
+            --text-sub: #a19bb0;
+        }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
 
-  body {
-    background: var(--ink);
-    color: var(--cream);
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        /* Subtle glowing background lights */
+        .orb {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 0, 102, 0.12) 0%, rgba(255, 0, 102, 0) 70%);
+            filter: blur(40px);
+            z-index: 0;
+        }
+        .orb-1 { top: -80px; right: -50px; }
+        .orb-2 { bottom: -80px; left: -50px; }
 
-  header {
-    padding: 72px 0 48px;
-    text-align: center;
-    background:
-      radial-gradient(ellipse at 50% -10%, rgba(201,162,39,0.16), transparent 60%),
-      var(--ink);
-  }
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 440px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 45px 35px;
+            text-align: center;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
 
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--gold-soft);
-    background: rgba(201,162,39,0.08);
-    border: 1px solid var(--line);
-    padding: 7px 14px;
-    border-radius: 20px;
-    margin-bottom: 28px;
-  }
-  .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--jade-light); }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-  h1 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: clamp(30px, 6vw, 46px);
-    line-height: 1.18;
-    color: var(--cream);
-    max-width: 15ch;
-    margin: 0 auto 18px;
-  }
+        .header {
+            margin-bottom: 35px;
+        }
 
-  h1 em { font-style: italic; color: var(--gold); }
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, #ff4b90 100%);
+            border-radius: 22px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 28px rgba(255, 0, 102, 0.3);
+        }
 
-  .sub {
-    max-width: 44ch;
-    margin: 0 auto;
-    color: var(--gold-soft);
-    font-size: 16px;
-  }
+        .icon-container svg {
+            width: 42px;
+            height: 42px;
+            fill: #ffffff;
+        }
 
-  .app-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 24px;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--jade-light);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
-  }
-  .app-link:hover { border-color: var(--jade-light); }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #eae6f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  .verse {
-    margin-top: 36px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    color: rgba(243,233,220,0.4);
-    letter-spacing: 0.02em;
-  }
+        .subtitle {
+            font-size: 15px;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
 
-  main { padding: 8px 0 64px; }
+        .options-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 35px;
+        }
 
-  .give-panel {
-    background: var(--ink-soft);
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    padding: 40px;
-    margin-top: -8px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-  }
+        .option-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-align: left;
+        }
 
-  .give-tabs {
-    display: flex;
-    gap: 4px;
-    background: rgba(0,0,0,0.22);
-    padding: 4px;
-    border-radius: 4px;
-    margin-bottom: 28px;
-  }
+        .option-card:hover {
+            background: var(--glass-hover);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
 
-  .give-tab {
-    flex: 1;
-    text-align: center;
-    padding: 12px 16px;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    color: rgba(243,233,220,0.55);
-    background: transparent;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: color 0.2s ease, background 0.2s ease;
-  }
+        .option-card.selected {
+            background: rgba(255, 0, 102, 0.05);
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(255, 0, 102, 0.08);
+        }
 
-  .give-tab.active { color: var(--ink); background: var(--gold-soft); }
+        .card-details h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
 
-  .give-panel-body { display: none; }
-  .give-panel-body.active { display: block; }
+        .option-card.selected .card-details h3 {
+            color: var(--primary);
+        }
 
-  .give-panel-body p.lead {
-    color: rgba(243,233,220,0.75);
-    font-size: 15px;
-    margin-bottom: 24px;
-  }
+        .card-details p {
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.4;
+        }
 
-  .give-panel-body p.amount-hint {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12.5px;
-    color: rgba(243,233,220,0.4);
-    margin-bottom: 20px;
-  }
+        .radio-dot {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
 
-  .cta {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 16px 24px;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    letter-spacing: 0.01em;
-  }
+        .option-card.selected .radio-dot {
+            border-color: var(--primary);
+            background: var(--primary);
+        }
 
-  .cta:hover { transform: translateY(-1px); }
+        .radio-dot::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: none;
+        }
 
-  .cta-primary { background: var(--gold); color: var(--ink); }
-  .cta-primary:hover { box-shadow: 0 6px 20px rgba(201,162,39,0.25); }
+        .option-card.selected .radio-dot::after {
+            display: block;
+        }
 
-  .method-note {
-    margin-top: 18px;
-    font-size: 13px;
-    color: rgba(243,233,220,0.45);
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-  }
-  .method-note .dot { color: var(--jade-light); }
+        .btn-support {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 18px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(255, 0, 102, 0.2);
+        }
 
-  .descriptor-note {
-    margin-top: 10px;
-    font-size: 12.5px;
-    color: rgba(243,233,220,0.38);
-    font-family: 'IBM Plex Mono', monospace;
-  }
-  .descriptor-note b { color: rgba(243,233,220,0.55); font-weight: 500; }
+        .btn-support:hover {
+            background: var(--primary-hover);
+            box-shadow: 0 10px 24px rgba(255, 0, 102, 0.35);
+            transform: translateY(-1px);
+        }
 
-  section.info { margin-top: 48px; }
+        .btn-support:active {
+            transform: translateY(1px);
+        }
 
-  .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 24px;
-  }
-
-  @media (max-width: 560px) {
-    .info-grid { grid-template-columns: 1fr; }
-    .give-panel { padding: 28px 20px; }
-  }
-
-  .info-card { border-left: 2px solid var(--jade); padding-left: 16px; }
-
-  .info-card .num {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    color: var(--jade-light);
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  .info-card h3 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: 17px;
-    margin-bottom: 6px;
-    color: var(--cream);
-  }
-
-  .info-card p { font-size: 14px; color: rgba(243,233,220,0.6); }
-
-  .disclosure {
-    margin-top: 40px;
-    padding: 16px 20px;
-    background: rgba(0,0,0,0.18);
-    border-radius: 4px;
-    font-size: 12.5px;
-    color: rgba(243,233,220,0.42);
-    line-height: 1.6;
-  }
-
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 32px 0 64px;
-    text-align: center;
-  }
-
-  footer p { font-size: 13px; color: rgba(243,233,220,0.4); }
-  footer a { color: var(--gold-soft); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-</style>
+        footer {
+            margin-top: 35px;
+            font-size: 12px;
+            color: var(--text-sub);
+            opacity: 0.6;
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
 
-<header>
-  <div class="wrap">
-    <div class="badge"><span class="dot"></span>Myanmar Gospel Songs</div>
-    <h1>Keep the gospel songs <em>free</em> for every listener</h1>
-    <p class="sub">Myanmar Gospel Songs stays free for believers everywhere, at home and abroad, through the generosity of listeners like you.</p>
-    <a class="app-link" href="https://play.google.com/store/apps/details?id=com.vinznex.gospelsongs" target="_blank" rel="noopener">
-      <img src="images/google-play-badge.png" alt="Get it on Google Play" style="height: 44px; width: auto;">
-    </a>
-    <div class="verse">2 Corinthians 9:7 — "Each of you should give what you have decided in your heart to give"</div>
-  </div>
-</header>
+    <div class="container">
+        <div class="header">
+            <div class="icon-container">
+                <!-- Music Note SVG Icon -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+            </div>
+            <h1>Support mGospel</h1>
+            <p class="subtitle">mGospel is 100% ad-free. Your voluntary donations help cover API fees, cloud hosting, and future enhancements.</p>
+        </div>
 
-<main>
-  <div class="wrap">
-    <div class="give-panel">
-      <div class="give-tabs">
-        <button class="give-tab active" onclick="showPanel('once')">Give once</button>
-        <button class="give-tab" onclick="showPanel('monthly')">Give monthly</button>
-      </div>
+        <div class="options-group">
+            <!-- Option 1: Monthly Support -->
+            <!-- !!! PUSH YOUR STRIPE MONTHLY LINK IN ONCLICK PARAMETER !!! -->
+            <div class="option-card selected" onclick="selectOption(this, 'https://buy.stripe.com/your-monthly-link-id')">
+                <div class="card-details">
+                    <h3>Monthly Support</h3>
+                    <p>Become a continuous supporter to help build updates.</p>
+                </div>
+                <div class="radio-dot"></div>
+            </div>
 
-      <div class="give-panel-body active" id="panel-once">
-        <p class="lead">A single gift toward hosting, production, and keeping the app ad-light. Choose your own amount on the next page.</p>
-        <a class="cta cta-primary" href="https://donate.stripe.com/aFaaEWatPgSVejP5RNbII00" target="_blank" rel="noopener">Give once</a>
-        <div class="method-note"><span class="dot">●</span>Cards, Apple Pay, Google Pay — works worldwide, including international cards issued in Myanmar</div>
-        <div class="descriptor-note">Appears on your statement as <b>VINZNEX DONATE</b></div>
-      </div>
+            <!-- Option 2: One-time gift -->
+            <!-- !!! PUSH YOUR STRIPE ONE-TIME LINK IN ONCLICK PARAMETER !!! -->
+            <div class="option-card" onclick="selectOption(this, 'https://buy.stripe.com/your-one-time-link-id')">
+                <div class="card-details">
+                    <h3>One-time Gift</h3>
+                    <p>Make a single contribution to keep development active.</p>
+                </div>
+                <div class="radio-dot"></div>
+            </div>
+        </div>
 
-      <div class="give-panel-body" id="panel-monthly">
-        <p class="lead">Become a sustaining supporter with a recurring monthly gift.</p>
-        <p class="amount-hint">$5.00 / month</p>
-        <a class="cta cta-primary" href="https://donate.stripe.com/dRm00i1XjbyBb7D3JFbII01" target="_blank" rel="noopener">Give monthly</a>
-        <div class="method-note"><span class="dot">●</span>Cancel anytime, directly from your receipt email</div>
-        <div class="descriptor-note">Appears on your statement as <b>VINZNEX DONATE</b></div>
-      </div>
+        <!-- Default to the Monthly Link ID as fallback -->
+        <a id="donateBtn" class="btn-support" href="https://buy.stripe.com/your-monthly-link-id" target="_blank">
+            Donate Now
+        </a>
+
+        <footer>
+            Secured and processed by Stripe Payments
+        </footer>
     </div>
 
-    <section class="info">
-      <div class="info-grid">
-        <div class="info-card">
-          <span class="num">01</span>
-          <h3>Where it goes</h3>
-          <p>App hosting, audio production, and the time spent compiling and mastering each gospel song release.</p>
-        </div>
-        <div class="info-card">
-          <span class="num">02</span>
-          <h3>For the diaspora</h3>
-          <p>Built for Myanmar believers abroad who want the songs close, wherever they've settled.</p>
-        </div>
-      </div>
-
-      <div class="disclosure">
-        Myanmar Gospel Songs is an independent, individually run project — not a registered charity or nonprofit. Donations support app development and content costs directly, but are not tax-deductible.
-      </div>
-    </section>
-  </div>
-</main>
-
-<footer>
-  <div class="wrap">
-    <p>Myanmar Gospel Songs &middot; <a href="https://play.google.com/store/apps/details?id=com.vinznex.gospelsongs" target="_blank" rel="noopener">Google Play</a> &middot; <a href="https://vinznex.github.io">vinznex.github.io</a></p>
-  </div>
-</footer>
-
-<script>
-  function showPanel(which) {
-    document.querySelectorAll('.give-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.give-panel-body').forEach(p => p.classList.remove('active'));
-    document.querySelector(`.give-tab[onclick="showPanel('${which}')"]`).classList.add('active');
-    document.getElementById(`panel-${which}`).classList.add('active');
-  }
-</script>
-
+    <script>
+        function selectOption(element, checkoutUrl) {
+            // Uncheck all cards
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Check current card
+            element.classList.add('selected');
+            
+            // Set dynamic link to button
+            document.getElementById('donateBtn').href = checkoutUrl;
+        }
+    </script>
 </body>
 </html>
