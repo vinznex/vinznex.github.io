@@ -146,21 +146,11 @@
     margin-bottom: 24px;
   }
 
-  .amounts {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-
-  .amounts span {
-    text-align: center;
-    padding: 12px 4px;
-    border: 1px solid var(--line);
-    border-radius: 4px;
+  .give-panel-body p.amount-hint {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    color: var(--gold-soft);
+    font-size: 12.5px;
+    color: rgba(243,233,220,0.4);
+    margin-bottom: 20px;
   }
 
   .cta {
@@ -212,7 +202,6 @@
   @media (max-width: 560px) {
     .info-grid { grid-template-columns: 1fr; }
     .give-panel { padding: 28px 20px; }
-    .amounts { grid-template-columns: repeat(4, 1fr); gap: 6px; }
   }
 
   .info-card { border-left: 2px solid var(--jade); padding-left: 16px; }
@@ -264,7 +253,7 @@
     <h1>Keep the gospel songs <em>free</em> for every listener</h1>
     <p class="sub">Myanmar Gospel Songs stays free for believers everywhere, at home and abroad, through the generosity of listeners like you.</p>
     <a class="app-link" href="https://play.google.com/store/apps/details?id=com.vinznex.gospelsongs" target="_blank" rel="noopener">
-      ▸ Get the app on Google Play
+      <img src="images/google-play-badge.png" alt="Get it on Google Play" style="height: 44px; width: auto;">
     </a>
     <div class="verse">2 Corinthians 9:7 — "Each of you should give what you have decided in your heart to give"</div>
   </div>
@@ -279,19 +268,16 @@
       </div>
 
       <div class="give-panel-body active" id="panel-once">
-        <p class="lead">A single gift toward hosting, production, and keeping the app ad-light.</p>
-        <div class="amounts"><span>$5</span><span>$10</span><span>$25</span><span>$50</span></div>
-        <!-- Replace with your Stripe one-time Payment Link -->
-        <a class="cta cta-primary" href="https://buy.stripe.com/REPLACE_WITH_ONE_TIME_LINK" target="_blank" rel="noopener">Give once</a>
+        <p class="lead">A single gift toward hosting, production, and keeping the app ad-light. Choose your own amount on the next page.</p>
+        <a class="cta cta-primary" href="https://donate.stripe.com/aFaaEWatPgSVejP5RNbII00" target="_blank" rel="noopener">Give once</a>
         <div class="method-note"><span class="dot">●</span>Cards, Apple Pay, Google Pay — works worldwide, including international cards issued in Myanmar</div>
         <div class="descriptor-note">Appears on your statement as <b>VINZNEX DONATE</b></div>
       </div>
 
       <div class="give-panel-body" id="panel-monthly">
         <p class="lead">Become a sustaining supporter with a recurring monthly gift.</p>
-        <div class="amounts"><span>$3</span><span>$5</span><span>$10</span><span>$20</span></div>
-        <!-- Replace with your Stripe recurring Payment Link -->
-        <a class="cta cta-primary" href="https://buy.stripe.com/REPLACE_WITH_MONTHLY_LINK" target="_blank" rel="noopener">Give monthly</a>
+        <p class="amount-hint">$5.00 / month</p>
+        <a class="cta cta-primary" href="https://donate.stripe.com/dRm00i1XjbyBb7D3JFbII01" target="_blank" rel="noopener">Give monthly</a>
         <div class="method-note"><span class="dot">●</span>Cancel anytime, directly from your receipt email</div>
         <div class="descriptor-note">Appears on your statement as <b>VINZNEX DONATE</b></div>
       </div>
