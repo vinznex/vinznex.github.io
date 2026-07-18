@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Myanmar Gospel Songs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #241318;
+    --ink-soft: #33212a;
+    --gold: #c9a227;
+    --gold-soft: #ddc27a;
+    --cream: #f3e9dc;
+    --jade: #3e5c50;
+    --jade-light: #6b8c7f;
+    --rose: #b8604f;
+    --line: rgba(201, 162, 39, 0.28);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    padding: 72px 0 48px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(201,162,39,0.16), transparent 60%),
+      var(--ink);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    background: rgba(201,162,39,0.08);
+    border: 1px solid var(--line);
+    padding: 7px 14px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+  }
+  .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--jade-light); }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(30px, 6vw, 46px);
+    line-height: 1.18;
+    color: var(--cream);
+    max-width: 15ch;
+    margin: 0 auto 18px;
+  }
+
+  h1 em { font-style: italic; color: var(--gold); }
+
+  .sub {
+    max-width: 44ch;
+    margin: 0 auto;
+    color: var(--gold-soft);
+    font-size: 16px;
+  }
+
+  .app-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--jade-light);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  .app-link:hover { border-color: var(--jade-light); }
+
+  .verse {
+    margin-top: 36px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: rgba(243,233,220,0.4);
+    letter-spacing: 0.02em;
+  }
+
+  main { padding: 8px 0 64px; }
+
+  .give-panel {
+    background: var(--ink-soft);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 40px;
+    margin-top: -8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  }
+
+  .give-tabs {
+    display: flex;
+    gap: 4px;
+    background: rgba(0,0,0,0.22);
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+  }
+
+  .give-tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 16px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(243,233,220,0.55);
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .give-tab.active { color: var(--ink); background: var(--gold-soft); }
+
+  .give-panel-body { display: none; }
+  .give-panel-body.active { display: block; }
+
+  .give-panel-body p.lead {
+    color: rgba(243,233,220,0.75);
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .amounts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .amounts span {
+    text-align: center;
+    padding: 12px 4px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--gold-soft);
+  }
+
+  .cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px 24px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    letter-spacing: 0.01em;
+  }
+
+  .cta:hover { transform: translateY(-1px); }
+
+  .cta-primary { background: var(--gold); color: var(--ink); }
+  .cta-primary:hover { box-shadow: 0 6px 20px rgba(201,162,39,0.25); }
+
+  .method-note {
+    margin-top: 18px;
+    font-size: 13px;
+    color: rgba(243,233,220,0.45);
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .method-note .dot { color: var(--jade-light); }
+
+  .descriptor-note {
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: rgba(243,233,220,0.38);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .descriptor-note b { color: rgba(243,233,220,0.55); font-weight: 500; }
+
+  section.info { margin-top: 48px; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 560px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .give-panel { padding: 28px 20px; }
+    .amounts { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  }
+
+  .info-card { border-left: 2px solid var(--jade); padding-left: 16px; }
+
+  .info-card .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--jade-light);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .info-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: var(--cream);
+  }
+
+  .info-card p { font-size: 14px; color: rgba(243,233,220,0.6); }
+
+  .disclosure {
+    margin-top: 40px;
+    padding: 16px 20px;
+    background: rgba(0,0,0,0.18);
+    border-radius: 4px;
+    font-size: 12.5px;
+    color: rgba(243,233,220,0.42);
+    line-height: 1.6;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 0 64px;
+    text-align: center;
+  }
+
+  footer p { font-size: 13px; color: rgba(243,233,220,0.4); }
+  footer a { color: var(--gold-soft); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span>Myanmar Gospel Songs</div>
+    <h1>Keep the gospel songs <em>free</em> for every listener</h1>
+    <p class="sub">Myanmar Gospel Songs stays free for believers everywhere, at home and abroad, through the generosity of listeners like you.</p>
+    <a class="app-link" href="https://play.google.com/store/apps/details?id=com.vinznex.gospelsongs" target="_blank" rel="noopener">
+      ▸ Get the app on Google Play
+    </a>
+    <div class="verse">2 Corinthians 9:7 — "Each of you should give what you have decided in your heart to give"</div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="give-panel">
+      <div class="give-tabs">
+        <button class="give-tab active" onclick="showPanel('once')">Give once</button>
+        <button class="give-tab" onclick="showPanel('monthly')">Give monthly</button>
+      </div>
+
+      <div class="give-panel-body active" id="panel-once">
+        <p class="lead">A single gift toward hosting, production, and keeping the app ad-light.</p>
+        <div class="amounts"><span>$5</span><span>$10</span><span>$25</span><span>$50</span></div>
+        <!-- Replace with your Stripe one-time Payment Link -->
+        <a class="cta cta-primary" href="https://buy.stripe.com/REPLACE_WITH_ONE_TIME_LINK" target="_blank" rel="noopener">Give once</a>
+        <div class="method-note"><span class="dot">●</span>Cards, Apple Pay, Google Pay — works worldwide, including international cards issued in Myanmar</div>
+        <div class="descriptor-note">Appears on your statement as <b>VINZNEX DONATE</b></div>
+      </div>
+
+      <div class="give-panel-body" id="panel-monthly">
+        <p class="lead">Become a sustaining supporter with a recurring monthly gift.</p>
+        <div class="amounts"><span>$3</span><span>$5</span><span>$10</span><span>$20</span></div>
+        <!-- Replace with your Stripe recurring Payment Link -->
+        <a class="cta cta-primary" href="https://buy.stripe.com/REPLACE_WITH_MONTHLY_LINK" target="_blank" rel="noopener">Give monthly</a>
+        <div class="method-note"><span class="dot">●</span>Cancel anytime, directly from your receipt email</div>
+        <div class="descriptor-note">Appears on your statement as <b>VINZNEX DONATE</b></div>
+      </div>
+    </div>
+
+    <section class="info">
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="num">01</span>
+          <h3>Where it goes</h3>
+          <p>App hosting, audio production, and the time spent compiling and mastering each gospel song release.</p>
+        </div>
+        <div class="info-card">
+          <span class="num">02</span>
+          <h3>For the diaspora</h3>
+          <p>Built for Myanmar believers abroad who want the songs close, wherever they've settled.</p>
+        </div>
+      </div>
+
+      <div class="disclosure">
+        Myanmar Gospel Songs is an independent, individually run project — not a registered charity or nonprofit. Donations support app development and content costs directly, but are not tax-deductible.
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Myanmar Gospel Songs &middot; <a href="https://play.google.com/store/apps/details?id=com.vinznex.gospelsongs" target="_blank" rel="noopener">Google Play</a> &middot; <a href="https://vinznex.eu.org">vinznex.eu.org</a></p>
+  </div>
+</footer>
+
+<script>
+  function showPanel(which) {
+    document.querySelectorAll('.give-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.give-panel-body').forEach(p => p.classList.remove('active'));
+    document.querySelector(`.give-tab[onclick="showPanel('${which}')"]`).classList.add('active');
+    document.getElementById(`panel-${which}`).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
