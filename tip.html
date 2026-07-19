@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Jar - Support Myanmar Gospel Songs App</title>
+  <meta name="description"
+    content="Support the independent development of Myanmar Gospel Songs and other Vinznex applications.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tip.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Vinznex Logo">
+        <span>Vinznex</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#apps">Apps</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="tip.html" class="active">Tip Jar</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="index.html#apps">Apps</a>
+    <a href="index.html#about">About</a>
+    <a href="about.html">Our Story</a>
+    <a href="tip.html" class="active">Tip Jar</a>
+  </div>
+
+  <!-- Tip Section -->
+  <section class="tip-section">
+    <div class="tip-container-wrapper">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+
+      <div class="tip-card-box">
+        <div class="tip-header">
+          <div class="tip-icon-container">
+            <!-- Music Note SVG Icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+            </svg>
+          </div>
+          <h1>mGospel Tip Jar</h1>
+          <p class="tip-subtitle">mGospel is 100% ad-free. Your optional tips support independent development, helping cover API fees, cloud hosting, and future enhancements.</p>
+        </div>
+
+        <div class="tip-options-group">
+          <!-- Option 1: Monthly Support -->
+          <div class="tip-option-card selected" onclick="selectOption(this, 'https://donate.stripe.com/dRm00i1XjbyBb7D3JFbII01')">
+            <div class="tip-card-details">
+              <h3>Monthly Support</h3>
+              <p>Become a continuous supporter to help build updates.</p>
+            </div>
+            <div class="tip-radio-dot"></div>
+          </div>
+
+          <!-- Option 2: One-time Tip -->
+          <div class="tip-option-card" onclick="selectOption(this, 'https://donate.stripe.com/aFaaEWatPgSVejP5RNbII00')">
+            <div class="tip-card-details">
+              <h3>One-time Tip</h3>
+              <p>Make a single contribution to keep development active.</p>
+            </div>
+            <div class="tip-radio-dot"></div>
+          </div>
+        </div>
+
+        <!-- Default to the Monthly Link ID as fallback -->
+        <a id="tipBtn" class="btn-support" href="https://donate.stripe.com/dRm00i1XjbyBb7D3JFbII01" target="_blank">
+          Send a Tip
+        </a>
+
+        <div class="tip-footer">
+          Secured and processed by Stripe Payments
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Vinznex Logo">
+            <span>Vinznex</span>
+          </a>
+          <p>Crafting apps that make a difference for the Myanmar community worldwide.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#apps">Apps</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="about.html">Our Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:vinznex@yahoo.com">vinznex@yahoo.com</a></li>
+            <li><a href="https://play.google.com/store/apps/dev?id=8062938484459746017" target="_blank">Google Play
+                Store</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Vinznex. All rights reserved.</p>
+
+        <div class="social-links">
+          <a href="mailto:vinznex@yahoo.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+          <a href="https://play.google.com/store/apps/dev?id=8062938484459746017" target="_blank"
+            aria-label="Google Play">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function selectOption(element, checkoutUrl) {
+      // Uncheck all cards
+      document.querySelectorAll('.tip-option-card').forEach(card => {
+        card.classList.remove('selected');
+      });
+
+      // Check current card
+      element.classList.add('selected');
+
+      // Set dynamic link to button
+      document.getElementById('tipBtn').href = checkoutUrl;
+    }
+  </script>
+</body>
+
+</html>
